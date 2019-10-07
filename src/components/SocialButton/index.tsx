@@ -19,14 +19,13 @@ const StyledButton = styled(Button)`
 const StyledIcon = styled.img`
     height : 40px !important;
     width : 40px !important;
-    color : white
 `
 
 const SocialButton: React.FC<SocialProps> = (props) => {
     return (
         <a href={props.path} target="_blank" rel="noopener noreferrer">
             <StyledButton>
-                <StyledIcon src={props.iconSrc} />
+                <StyledIcon  src={props.iconSrc} />
             </StyledButton>
         </a>
     )

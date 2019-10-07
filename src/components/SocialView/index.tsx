@@ -18,10 +18,12 @@ const StyledContainerSocialView = styled.div`
 `
 const socialIconData = [
     {
+        key : "ic_fb",
         path: LINK_FACEBOOK,
         iconSrc: Ic_FB,
     },
     {
+        key: "ic_linkedin",
         path: LINK_LINKEDIN,
         iconSrc: Ic_LINKED_IN,
     }
@@ -33,7 +35,7 @@ export default class SocialView extends React.Component {
             <StyledContainerSocialView>
                 {
                     socialIconData.map(i => {
-                        return <SocialButton iconSrc={i.iconSrc} path={i.path} />
+                        return <SocialButton key={i.key} iconSrc={i.iconSrc} path={i.path} />
                     })
                 }
             </StyledContainerSocialView>

@@ -11,27 +11,18 @@ const StyledContainerMenu = styled.div`
 `
 
 interface States {
-    toggle: boolean,
+  
     x?: string,
     y?: string
 }
 
 interface Props {
-
+    toggle: boolean,
+    onClick : Function
 }
 
 export default class HamburgerButton extends React.Component<Props, States>{
-    constructor(props: Props) {
-        super(props);
-        this.state = {
-            toggle: false
-        };
-    }
-
-    handleClick() {
-        this.setState({ toggle: !this.state.toggle });
-    }
-
+   
     render() {
         const style = {
             overflow: 'visible',
@@ -51,14 +42,14 @@ export default class HamburgerButton extends React.Component<Props, States>{
                     React.createElement("svg", {
                         viewBox: "0 0 96 96",
                         height: "1em",
-                        onClick: this.handleClick.bind(this),
+                        onClick: this.props.onClick,
                         style: style
                     },
 
                         React.createElement(Motion, {
                             style: {
-                                x: spring(this.state.toggle ? 1 : 0, presets.wobbly),
-                                y: spring(this.state.toggle ? 0 : 1, presets.wobbly)
+                                x: spring(this.props.toggle ? 1 : 0, presets.wobbly),
+                                y: spring(this.props.toggle ? 0 : 1, presets.wobbly)
                             }
                         },
 
