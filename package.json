@@ -2,7 +2,7 @@
   "name": "mralbertnguyen.github.io",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://mralbertnguyen.github.io",
+  "homepage": "http://mralbertnguyen.github.io/m-blog",
   "dependencies": {
     "@types/jest": "24.0.18",
     "@types/node": "12.7.8",
