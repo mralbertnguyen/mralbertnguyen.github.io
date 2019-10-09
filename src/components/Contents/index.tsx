@@ -4,26 +4,15 @@
  */
 
 import React from 'react'
-import styled from 'styled-components'
 import LandingPage from '../../containers/LandingPage';
-
-const StyledImageBackground = styled.div`
-    height : 100%;
-    width : 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-`
-
-
+import "./style.css";
 
 export default class Content extends React.Component {
     render() {
         return (
-            <StyledImageBackground>
+            <div  className="container-content">
                 <LandingPage />
-            </StyledImageBackground>
+            </div>
         );
     }
 }

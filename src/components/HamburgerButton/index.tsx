@@ -11,32 +11,28 @@ const StyledContainerMenu = styled.div`
 `
 
 interface States {
-  
+
     x?: string,
     y?: string
 }
 
 interface Props {
     toggle: boolean,
-    onClick : Function
+    onClick: Function
 }
 
 export default class HamburgerButton extends React.Component<Props, States>{
-   
     render() {
         const style = {
             overflow: 'visible',
             cursor: 'pointer',
             // disable touch highlighting on devices
             WebkitTapHighlightColor: "rgba(0,0,0,0)",
-            height : '30px',
-            width : '30px',
-            color : 'white'
+            height: '30px',
+            width: '30px',
+            color: 'white'
         };
-
-
         return (
-
             <StyledContainerMenu>
                 {
                     React.createElement("svg", {
