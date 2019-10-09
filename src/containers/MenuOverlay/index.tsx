@@ -1,51 +1,49 @@
 import React from 'react'
-import styled from 'styled-components'
-// import HamburgerButton from '../../components/HambergerButton'
-
-const StyledContainerMenuOverlay = styled.div`
-    background-color : white;
-    height : 100%;
-    width : 100%;
-    justify-content : center;
-    align-items : center;
-    position : fixed;
-`
-const StyledContainerBlur = styled.div`
-    background-color : black;
-    height : 100%;
-    width : 100%;
-    opacity : 0.8;
-    position : absolute;
-`
-
-const StyledContainerContentMenu = styled.div`
-    height : 100%;
-    width : 100%;
-    background-color : black;
-    display : flex;
-    align-items : center;
-    justify-content : center;
-`
-
-interface States {
-
-}
+import "./style.css";
+import menu_data from "../../utils/data/menu.json";
+import {MenuDataType} from "../../utils/types/menu.type";
+import { Link } from 'react-router-dom';
+interface States { }
 
 interface Props {
     display: boolean
 }
 
+const MenuItemList: React.FC<MenuDataType> = (item:MenuDataType) => {
+    return (
+        <div key={item.id} className="container-menu-item-list">
+            <Link to={item.path}><p className="txt-title">{item.title}</p></Link>
+        </div>
+    );
+}
+
+const ListMenu: React.FC = () => {
+    return (
+        <div className="container-list-menu">
+            {
+                menu_data.map(i => {
+                    return MenuItemList(i)
+                })
+            }
+        </div>
+    );
+}
+const MenuOverlay_Menu: React.FC = () => {
+    return (
+        <div className="container-menu-overlay">
+            <ListMenu />
+        </div>
+    )
+}
+
 export default class MenuOverlay extends React.Component<Props, States>{
+    componentDidUpdate() {
+        console.log(`MenuOverlay - componentDidUpdate ${this.props.display}`);
+    }
     render() {
         return (
-            (this.props.display) ? 
-                <StyledContainerMenuOverlay> 
-                    {/* <StyledContainerBlur/>
-                    <StyledContainerContentMenu>
-                        Menu
-                    </StyledContainerContentMenu> */}
-
-                </StyledContainerMenuOverlay> : null
+            (this.props.display) ?
+                <MenuOverlay_Menu /> : null
         )
     }
 }
