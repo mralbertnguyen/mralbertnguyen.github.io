@@ -1,51 +1,31 @@
 import React from 'react'
-import styled from 'styled-components'
-// import HamburgerButton from '../../components/HambergerButton'
+import "./style.css";
 
-const StyledContainerMenuOverlay = styled.div`
-    background-color : white;
-    height : 100%;
-    width : 100%;
-    justify-content : center;
-    align-items : center;
-    position : fixed;
-`
-const StyledContainerBlur = styled.div`
-    background-color : black;
-    height : 100%;
-    width : 100%;
-    opacity : 0.8;
-    position : absolute;
-`
-
-const StyledContainerContentMenu = styled.div`
-    height : 100%;
-    width : 100%;
-    background-color : black;
-    display : flex;
-    align-items : center;
-    justify-content : center;
-`
-
-interface States {
-
-}
+interface States {}
 
 interface Props {
     display: boolean
 }
 
+
+const MenuOverlay_Menu : React.FC = () => {
+    return(
+        <div className="menu-overlay-menu">
+
+        </div>
+    )
+}
+
 export default class MenuOverlay extends React.Component<Props, States>{
+    componentDidUpdate(){
+        console.log(`MenuOverlay - componentDidUpdate ${this.props.display}`);
+    }
     render() {
         return (
-            (this.props.display) ? 
-                <StyledContainerMenuOverlay> 
-                    {/* <StyledContainerBlur/>
-                    <StyledContainerContentMenu>
-                        Menu
-                    </StyledContainerContentMenu> */}
-
-                </StyledContainerMenuOverlay> : null
+            (this.props.display) ?
+                <div className="container-menu-overlay">
+                    Menu Over lay
+                </div> : null
         )
     }
 }

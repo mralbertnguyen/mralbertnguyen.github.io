@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import HamburgerButton from '../HambergerButton';
+import HamburgerButton from '../HamburgerButton';
 import SocialView from '../SocialView/';
 
 const StyledContainerHeader = styled.div`
@@ -12,10 +12,9 @@ const StyledContainerHeader = styled.div`
     position: fixed;
     padding : 0px 5%;
     justify-content:space-between;
-    z-index: 1;
+    z-index: 3;
 
 `
-
 interface Props {
     toggle: boolean,
     onClickMenuButton : Function
@@ -24,9 +23,11 @@ interface Props {
 export default class Header extends React.Component<Props,{}>{
     render() {
         return (
-            <StyledContainerHeader>
+            <StyledContainerHeader className="container-header">
                 <HamburgerButton toggle={this.props.toggle} onClick={this.props.onClickMenuButton.bind(this)} />
-                <SocialView />
+                {
+                    (!this.props.toggle) ? <SocialView /> : null
+                }
             </StyledContainerHeader>
         )
     }
