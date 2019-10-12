@@ -18,7 +18,7 @@ export default class AppLayout extends React.Component<Props, States> {
     constructor(props: Props) {
         super(props);
         this.state = {
-            displayMenu: true,
+            displayMenu: false,
             toggle: false
         }
     }
