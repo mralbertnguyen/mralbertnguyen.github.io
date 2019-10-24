@@ -1,10 +1,13 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import { PATH_LANDING_PAGE,PATH_ROOT, PATH_LOGIN_PAGE } from "../utils/paths"
-import LandingPage from "../containers/LandingPage"
-import LoginPage from "../containers/LoginPage"
+import { PATH_LANDING_PAGE,PATH_ROOT, PATH_LOGIN_PAGE, PATH_FUNCTION_PAGE, PATH_BLOG_PAGE } from "../utils/paths"
 import { NotFound } from "../containers/Result"
 import AppLayout from '../layouts'
+
+import LandingPage from "../containers/LandingPage"
+import LoginPage from "../containers/LoginPage"
+import FunctionPage from "../containers/FunctionPage"
+import BlogPage from "../containers/BlogPage"
 
 const DataRoute = [
     {
@@ -21,14 +24,24 @@ const DataRoute = [
         key : "login-page",
         path: `${PATH_LOGIN_PAGE}`,
         component: LoginPage
-    }
+    },
+    { 
+        key : "function-page",
+        path: `${PATH_FUNCTION_PAGE}`,
+        component: FunctionPage,
+    },
+    { 
+        key : "blog-page",
+        path: `${PATH_BLOG_PAGE}`,
+        component: BlogPage,
+    },
+    
 ]
 
 const AppRoute = () => { 
     return (
         <Router>
             <Switch>
-
                 {
                     DataRoute.map(i => {
                         return <Route exact key={i.key} path={i.path} component={i.component} />

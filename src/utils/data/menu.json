@@ -8,5 +8,10 @@
     "id": "about",
     "title": "About Me",
     "path": ""
+  },
+  {
+    "id": "blog",
+    "title": "Blog",
+    "path": "/blog-page"
   }
 ]
