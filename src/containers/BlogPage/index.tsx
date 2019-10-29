@@ -43,6 +43,7 @@ export default class BlogPage extends React.Component {
   render() {
     return (
       <StyledContainerBlog>
+        
         <SCBlogHeader>
           <BlogMenu />
           <SCBlogHeaderTitle>
@@ -55,7 +56,6 @@ export default class BlogPage extends React.Component {
 
         <SCBlogContent>
           <PostPanel />
-
           <VideoView/>
         </SCBlogContent>
 

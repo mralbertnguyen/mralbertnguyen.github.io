@@ -13,6 +13,7 @@
     "@types/react-router-dom": "^5.1.0",
     "@types/react-transition-group": "^4.2.3",
     "@types/styled-components": "^4.1.19",
+    "ant-design-pro": "^1.4.4",
     "antd": "^3.23.5",
     "dotenv": "^8.1.0",
     "gh-pages": "^2.1.1",

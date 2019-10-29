@@ -8,7 +8,7 @@ interface Props {
   display: boolean;
 }
 
-const MenuItemList: React.FC<MenuDataType> = (item: MenuDataType) => {
+const MenuItemList = (item: MenuDataType) => {
   return (
     <div key={item.id} className="container-menu-item-list">
       <Link to={item.path}>
@@ -18,7 +18,7 @@ const MenuItemList: React.FC<MenuDataType> = (item: MenuDataType) => {
   );
 };
 
-const ListMenu: React.FC = () => {
+const ListMenu = () => {
   return (
     <div className="container-list-menu">
       {menu_data.map(i => {
@@ -28,7 +28,7 @@ const ListMenu: React.FC = () => {
   );
 };
 
-const MenuOverlay_Menu: React.FC = () => {
+const MenuOverlay_Menu = () => {
   return (
     <div className="container-menu-overlay">
       <ListMenu />

@@ -4,7 +4,7 @@ import menuData from '../../../utils/data/blog.menu.json';
 const SCMenuBlog = styled.div`
     height : 100px;
     width :600px;
-    background-color : pink;
+    // background-color : pink;
     display : flex;
     align-items:center;
     flex-direction: row;
@@ -19,7 +19,7 @@ const SCMenuBlogItem = styled.div`
     display: flex;
     justify-content : center;
     align-items : center;
-    background-color : green;
+    // background-color : green;
     margin : 10px;
 `
 
