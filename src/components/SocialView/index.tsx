@@ -3,10 +3,12 @@ import styled from 'styled-components';
 import SocialButton from '../SocialButton';
 
 // Path
-import {LINK_LINKEDIN, LINK_FACEBOOK} from '../../utils/paths';
+import {LINK_LINKEDIN, LINK_FACEBOOK, LINK_GITHUB, LINK_INSTAGRAM} from '../../utils/paths';
 //Icons 
-const Ic_FB = require("../../assets/icons/ic_facebook.svg");
+const Ic_FB = require("../../assets/icons/ic_fb.svg");
 const Ic_LINKED_IN = require("../../assets/icons/ic_linkedin.svg");
+const Ic_INSTAGRAM = require("../../assets/icons/ic_instagram.svg");
+const Ic_GITHUB = require("../../assets/icons/ic_github.svg");
 
 const StyledContainerSocialView = styled.div`
     width : auto;
@@ -26,6 +28,16 @@ const socialIconData = [
         key: "ic_linkedin",
         path: LINK_LINKEDIN,
         iconSrc: Ic_LINKED_IN,
+    },
+    {
+        key: "ic_instagram",
+        path: LINK_INSTAGRAM,
+        iconSrc: Ic_INSTAGRAM,
+    },
+    {
+        key: "ic_github",
+        path: LINK_GITHUB,
+        iconSrc: Ic_GITHUB,
     }
 ]
 

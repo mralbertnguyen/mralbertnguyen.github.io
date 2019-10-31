@@ -1,6 +1,5 @@
 import React from 'react';
 import Header from '../components/Header';
-import Content from '../components/Contents';
 import MenuOverlay from '../containers/MenuOverlay';
 import "./style.css";
 
@@ -38,7 +37,6 @@ export default class AppLayout extends React.Component<Props, States> {
                 <div className="container-blur-effect" />
                 <Header toggle={this.state.toggle} onClickMenuButton={this.handleClickMenuButton} />
                 <MenuOverlay display={this.state.displayMenu} />
-                <Content />
             </div>
         )
     }

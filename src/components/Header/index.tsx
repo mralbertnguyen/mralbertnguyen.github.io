@@ -24,7 +24,7 @@ export default class Header extends React.Component<Props,{}>{
     render() {
         return (
             <StyledContainerHeader className="container-header">
-                <HamburgerButton toggle={this.props.toggle} onClick={this.props.onClickMenuButton.bind(this)} />
+                <HamburgerButton color="black" toggle={this.props.toggle} onClick={this.props.onClickMenuButton.bind(this)} />
                 {
                     (!this.props.toggle) ? <SocialView /> : null
                 }
