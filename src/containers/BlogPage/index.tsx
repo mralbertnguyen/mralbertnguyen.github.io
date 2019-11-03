@@ -2,12 +2,10 @@ import React from "react";
 import styled , {keyframes} from "styled-components";
 
 import personalData from "../../utils/data/personal.json";
-import BlogMenu from "../../components/Menu/BlogMenu";
 import BlogHeader from "../../components/Header/Blog.Header";
 import BrImg from "../../assets/imgs/br-img.jpg";
 import ImgCloudy from "../../assets/imgs/cloud.png";
 import CarouselPost from "../../components/Carousels/Post.Carousel";
-import {Row, Col} from 'antd';
 const StyledContainerBlog = styled.div`
   flex-wrap: nowrap;
   padding: 0px;

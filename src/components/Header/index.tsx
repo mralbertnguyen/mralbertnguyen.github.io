@@ -17,14 +17,15 @@ const StyledContainerHeader = styled.div`
 `
 interface Props {
     toggle: boolean,
-    onClickMenuButton : Function
+    onClickMenuButton : Function,
+    colorBugger : string
 }
 
 export default class Header extends React.Component<Props,{}>{
     render() {
         return (
             <StyledContainerHeader className="container-header">
-                <HamburgerButton color="black" toggle={this.props.toggle} onClick={this.props.onClickMenuButton.bind(this)} />
+                <HamburgerButton color={this.props.colorBugger} toggle={this.props.toggle} onClick={this.props.onClickMenuButton.bind(this)} />
                 {
                     (!this.props.toggle) ? <SocialView /> : null
                 }

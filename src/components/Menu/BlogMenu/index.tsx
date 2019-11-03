@@ -1,7 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import menuData from '../../../utils/data/blog.menu.json';
-import {Row, Col} from 'antd';
 import './style.css';
 import HamburgerButton from '../../HamburgerButton/';
 const SCMenuBlog = styled.div`
