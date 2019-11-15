@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import './style.css';
 import HamburgerButton from '../../HamburgerButton/';
+import { PATH_ROOT } from '../../../utils/paths';
 const SCMenuBlog = styled.div`
     height : 100px;
     width :100%;
@@ -18,17 +19,17 @@ export default class BlogMenu extends React.Component{
         optionsMenu : [
             {
                 "id" : "oMenu1",
+                "name" : "Home",
+                "path" : PATH_ROOT
+            },
+            {
+                "id" : "oMenu2",
                 "name" : "About",
                 "path" : "#"
             },
             {
-                "id" : "oMenu2",
-                "name" : "Services",
-                "path" : "#"
-            },
-            {
                 "id" : "oMenu3",
-                "name" : "Clients",
+                "name" : "Service",
                 "path" : "#"
             }
         ]

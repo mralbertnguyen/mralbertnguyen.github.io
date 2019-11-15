@@ -2,7 +2,8 @@ import React from 'react';
 import Header from '../components/Header';
 import MenuOverlay from '../containers/MenuOverlay';
 import {Row, Col} from 'antd';
-import AboutMeContent from '../containers/Contents/AboutMe'
+import AboutMeContent from '../containers/Contents/AboutMe';
+
 import styled from 'styled-components';
 import "./style.css";
 
@@ -19,7 +20,7 @@ interface Props {
 const SCRow = styled(Row)`
     position : absolute !important;
     bottom : 0px;
-    height: 80% !important;
+    height: 100% !important;
     width: 100% !important;
 `
 
@@ -62,6 +63,10 @@ export default class AppLayout extends React.Component<Props, States> {
                 <SCRow>
                     <SCColLeft md={8}>
                         <AboutMeContent/>
+                    </SCColLeft>
+
+                    <SCColLeft md={16}>
+                        {/* <CVView/> */}
                     </SCColLeft>
                 </SCRow>
             </div>

@@ -8,7 +8,7 @@ interface Props {
   display: boolean;
 }
 
-const MenuItemList = (item: MenuDataType) => {
+function MenuItemList(item: MenuDataType){
   return (
     <div key={item.id} className="container-menu-item-list">
       <Link to={item.path}>
@@ -18,7 +18,7 @@ const MenuItemList = (item: MenuDataType) => {
   );
 };
 
-const ListMenu = () => {
+function ListMenu() {
   return (
     <div className="container-list-menu">
       {menu_data.map(i => {
@@ -28,16 +28,12 @@ const ListMenu = () => {
   );
 };
 
-const MenuOverlay_Menu = () => {
-  return (
-    <div className="container-menu-overlay">
+function MenuOverlay(props: Props){
+  return(
+    props.display ? <div className="container-menu-overlay">
       <ListMenu />
-    </div>
+    </div> : null
   );
-};
-
-export default class MenuOverlay extends React.Component<Props, {}> {
-  render() {
-    return <>{this.props.display ? <MenuOverlay_Menu /> : null}</>;
-  }
 }
+
+export default MenuOverlay;

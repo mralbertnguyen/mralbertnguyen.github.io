@@ -8,6 +8,34 @@ const SCContainer = styled.div`
   width: 400px;
 `;
 
+const dataCarousel = [
+  {
+    "id" : "img1",
+    "alt" : "img1",
+    "src" : BrImg
+  },
+  {
+    "id" : "img2",
+    "alt" : "img2",
+    "src" : BrImg
+  },
+  {
+    "id" : "img3",
+    "alt" : "img3",
+    "src" : BrImg
+  },
+  {
+    "id" : "img4",
+    "alt" : "img4",
+    "src" : BrImg
+  },
+  {
+    "id" : "img5",
+    "alt" : "img5",
+    "src" : BrImg
+  }
+]
+
 export default class CarouselPost extends Component {
   render() {
     return (
@@ -22,21 +50,15 @@ export default class CarouselPost extends Component {
           autoPlay={true}
           infiniteLoop={true}
         >
-          <div>
-            <img src={BrImg} />
-          </div>
-          <div>
-            <img src={BrImg} />
-          </div>
-          <div>
-            <img src={BrImg} />
-          </div>
-          <div>
-            <img src={BrImg} />
-          </div>
-          <div>
-            <img src={BrImg} />
-          </div>
+          {
+            dataCarousel.map((item)=>{
+              return(
+              <div id={item.id}>
+                <img alt={item.alt} src={item.src} />
+              </div>
+              );
+            })
+          }
         </Carousel>
       </SCContainer>
     );

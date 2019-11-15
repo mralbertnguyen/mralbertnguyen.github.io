@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Result, Button } from "antd";
-import {  PATH_ROOT } from "../../utils/paths";
+import { PATH_ROOT } from "../../utils/paths";
 import styled from 'styled-components'
 
 const StyledContainerResult = styled.div`
@@ -27,7 +27,6 @@ const NotFound: React.FC = () => {
                 }
             />
         </StyledContainerResult>
-
     );
 }
 
