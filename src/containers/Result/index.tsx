@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Result, Button } from "antd";
-import { PATH_LANDING_PAGE } from "../../utils/paths";
+import { PATH_ROOT } from "../../utils/paths";
 import styled from 'styled-components'
 
 const StyledContainerResult = styled.div`
@@ -21,13 +21,12 @@ const NotFound: React.FC = () => {
                 title="404"
                 subTitle="Sorry, the page you visited does not exist."
                 extra={
-                    <Link to={PATH_LANDING_PAGE}>
+                    <Link to={PATH_ROOT}>
                         <Button type="primary">Back Home</Button>
                     </Link>
                 }
             />
         </StyledContainerResult>
-
     );
 }
 

@@ -1,5 +1,7 @@
 {
     "title" : "Hello, I'm",
     "name" : "Albert Nguyen",
-    "desc" : "Short description"
+    "desc" : "Short description",
+    "title_header_blog" : "Albert's Blog",
+    "desc_header_blog" : "Description blog"
 }

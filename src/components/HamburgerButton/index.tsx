@@ -18,7 +18,8 @@ interface States {
 
 interface Props {
     toggle: boolean,
-    onClick: Function
+    onClick: Function,
+    color : string
 }
 
 export default class HamburgerButton extends React.Component<Props, States>{
@@ -26,11 +27,11 @@ export default class HamburgerButton extends React.Component<Props, States>{
         const style = {
             overflow: 'visible',
             cursor: 'pointer',
-            // disable touch highlighting on devices
             WebkitTapHighlightColor: "rgba(0,0,0,0)",
             height: '30px',
             width: '30px',
-            color: 'white'
+            color: this.props.color,
+            zIndex:10
         };
         return (
             <StyledContainerMenu>
