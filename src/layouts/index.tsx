@@ -1,16 +1,16 @@
 import React from 'react';
 import Header from '../components/Header';
 import MenuOverlay from '../containers/MenuOverlay';
-import {Row, Col} from 'antd';
-import AboutMeContent from '../containers/Contents/AboutMe';
-
+import {Row} from 'antd';
+import ShortResume from '../components/ShortResume'
 import styled from 'styled-components';
 import "./style.css";
 
 interface States {
     displayMenu: boolean,
     toggle: boolean,
-    colorBugger : string
+    colorBugger : string,
+    lblButtonViewMore : string
 }
 
 interface Props {
@@ -22,14 +22,27 @@ const SCRow = styled(Row)`
     bottom : 0px;
     height: 100% !important;
     width: 100% !important;
+    padding-top: 10%;
 `
 
-const SCColLeft = styled(Col)`
-    background-color : aqua;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    height: 100% !important;
+const SCContainerButton = styled.div`
+    height : 100px;
+    width : 100%;
+    display : flex;
+    justify-content : center;
+    align-items : center;
+`
+
+const SCButtonViewMore = styled.button`
+    background-color : black;
+    height: 40%;
+    width: 100px;
+    font-size: 12px;
+    display : flex;
+    justify-content: center;
+    border: none;
+    outline: transparent;
+    color: white;
 `
 
 export default class AppLayout extends React.Component<Props, States> {
@@ -39,7 +52,8 @@ export default class AppLayout extends React.Component<Props, States> {
         this.state = {
             displayMenu: false,
             toggle: false,
-            colorBugger : 'black'
+            colorBugger : 'black',
+            lblButtonViewMore : 'view more'
         }
     }
 
@@ -61,13 +75,12 @@ export default class AppLayout extends React.Component<Props, States> {
                 <Header colorBugger={this.state.colorBugger} toggle={this.state.toggle} onClickMenuButton={this.handleClickMenuButton} />
                 <MenuOverlay display={this.state.displayMenu} />
                 <SCRow>
-                    <SCColLeft md={8}>
-                        <AboutMeContent/>
-                    </SCColLeft>
-
-                    <SCColLeft md={16}>
-                        {/* <CVView/> */}
-                    </SCColLeft>
+                    <ShortResume/>
+                    <SCContainerButton>
+                        <SCButtonViewMore>
+                            {this.state.lblButtonViewMore.toLowerCase()}
+                        </SCButtonViewMore>
+                    </SCContainerButton>
                 </SCRow>
             </div>
         )
