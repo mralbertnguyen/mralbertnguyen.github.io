@@ -1,7 +1,7 @@
 import React from "react";
 import styled , {keyframes} from "styled-components";
 
-import personalData from "../../utils/data/personal.json";
+import personalData from "../../data/personal.json";
 import BlogHeader from "../../components/Header/Blog.Header";
 import BrImg from "../../assets/imgs/br-img.jpg";
 import ImgCloudy from "../../assets/imgs/cloud.png";

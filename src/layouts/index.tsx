@@ -1,16 +1,18 @@
+import { Row } from 'antd';
 import React from 'react';
-import Header from '../components/Header';
-import MenuOverlay from '../containers/MenuOverlay';
-import {Row} from 'antd';
-import ShortResume from '../components/ShortResume'
+import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
+import Header from '../components/Header';
+import ShortResume from '../components/ShortResume';
+import MenuOverlay from '../containers/MenuOverlay';
 import "./style.css";
 
 interface States {
     displayMenu: boolean,
     toggle: boolean,
-    colorBugger : string,
-    lblButtonViewMore : string
+    colorBugger: string,
+    lblButtonViewMore: string,
+    headerTitle:string
 }
 
 interface Props {
@@ -52,30 +54,41 @@ export default class AppLayout extends React.Component<Props, States> {
         this.state = {
             displayMenu: false,
             toggle: false,
-            colorBugger : 'black',
-            lblButtonViewMore : 'view more'
+            colorBugger: 'black',
+            lblButtonViewMore: 'view more',
+            headerTitle: ''
         }
     }
 
+    componentDidMount(){
+        this.setState({
+            headerTitle : process.env.REACT_APP_TITLE || "Header TItle" 
+        });
+    }
 
     handleClickMenuButton = () => {
         this.setState({
             toggle: !this.state.toggle,
             displayMenu: !this.state.displayMenu,
-            colorBugger : !this.state.toggle ? 'white' : 'black'
+            colorBugger: !this.state.toggle ? 'white' : 'black'
         });
         console.log(`Toggle : ${this.state.toggle} \n Display Menu : ${this.state.displayMenu}`)
         console.log("Pressed button");
     }
 
     render() {
+        const {headerTitle} = this.state;
         return (
             <div className="container-layout">
+                <Helmet>
+                <meta charSet="utf-8" />
+                <title>{headerTitle}</title>
+            </Helmet>
                 <div className="container-blur-effect" />
                 <Header colorBugger={this.state.colorBugger} toggle={this.state.toggle} onClickMenuButton={this.handleClickMenuButton} />
                 <MenuOverlay display={this.state.displayMenu} />
                 <SCRow>
-                    <ShortResume/>
+                    <ShortResume />
                     <SCContainerButton>
                         <SCButtonViewMore>
                             {this.state.lblButtonViewMore.toLowerCase()}

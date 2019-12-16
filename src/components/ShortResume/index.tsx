@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
 
-import userData from '../../utils/data/personal.json'
+import userData from '../../data/personal.json'
 const ImgAvt = require("../../assets/imgs/avt.jpg")
 
 const SCContainerShortResume = styled.div`

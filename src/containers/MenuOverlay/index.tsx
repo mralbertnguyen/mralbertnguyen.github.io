@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import menu_data from "../../utils/data/menu.json";
+import menu_data from "../../data/menu.json";
 import { MenuDataType } from "../../utils/types/menu.type";
 import { Link } from "react-router-dom";
 
