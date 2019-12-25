@@ -23,7 +23,7 @@ const StyledImage = styled.img`
     border-radius : 100px;
 `
 
-const SCNickName = styled.text`
+const SCNickName = styled.p`
     font-size : 4rem;
     margin: 0px;
     white-space: nowrap;

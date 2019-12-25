@@ -91,7 +91,7 @@ export default class AppLayout extends React.Component<Props, States> {
                     <ShortResume />
                     <SCContainerButton>
                         <SCButtonViewMore>
-                            {this.state.lblButtonViewMore.toLowerCase()}
+                            <p>{this.state.lblButtonViewMore.toLowerCase()}</p>
                         </SCButtonViewMore>
                     </SCContainerButton>
                 </SCRow>
