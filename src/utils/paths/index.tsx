@@ -1,6 +1,7 @@
-export const PATH_ROOT = "/";
-export const PATH_BLOG_PAGE = "/blog-page";
-export const PATH_SHOP_PAGE = "/shop-page";
+const DOMAIN = "http://mralbertnguyen.github.io/my-blog";
+export const PATH_ROOT = DOMAIN + "/";
+export const PATH_BLOG_PAGE = DOMAIN + "/blog-page";
+export const PATH_SHOP_PAGE = DOMAIN + "/shop-page";
 
 
 
