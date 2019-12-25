@@ -42,11 +42,12 @@ function ListMenu() {
 };
 
 function FeatureFlag() {
-  let isEnabled = process.env.REACT_APP_MENU_OVERLAY_ENABLED || false;
+  let isEnabled = process.env.REACT_APP_ENABLE_BLOG;
   return (isEnabled) ? <ListMenu /> : <FeatureComingSoon />;
 }
 
 function MenuOverlay(props: Props) {
+  console.log(process.env.REACT_APP_ENABLE_BLOG);
   return (
     props.display ? <div className="container-menu-overlay">
       <FeatureFlag />
