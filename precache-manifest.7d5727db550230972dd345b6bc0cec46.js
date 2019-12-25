@@ -1,27 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "634aa72822a2fd28ad3cc9999b2bc1ca",
+    "revision": "2955f19e47cfa98aad788351ecf3f18f",
     "url": "/mralbertnguyen.github.io/index.html"
   },
   {
-    "revision": "87df3228618a61754a64",
-    "url": "/mralbertnguyen.github.io/static/css/2.11d3bd0d.chunk.css"
+    "revision": "e6aae4994d3f1c684359",
+    "url": "/mralbertnguyen.github.io/static/css/2.53de959a.chunk.css"
   },
   {
-    "revision": "4d3b36e9413fe88b66fd",
+    "revision": "06026808f3f5bd611263",
     "url": "/mralbertnguyen.github.io/static/css/main.00daa6e7.chunk.css"
   },
   {
-    "revision": "87df3228618a61754a64",
-    "url": "/mralbertnguyen.github.io/static/js/2.07be6731.chunk.js"
+    "revision": "e6aae4994d3f1c684359",
+    "url": "/mralbertnguyen.github.io/static/js/2.af69ea37.chunk.js"
   },
   {
-    "revision": "4d3b36e9413fe88b66fd",
-    "url": "/mralbertnguyen.github.io/static/js/main.a133fef0.chunk.js"
+    "revision": "b16c193132695216b3273f2acb3f96c7",
+    "url": "/mralbertnguyen.github.io/static/js/2.af69ea37.chunk.js.LICENSE"
   },
   {
-    "revision": "1b2bf4b8efc26ff6164b",
-    "url": "/mralbertnguyen.github.io/static/js/runtime-main.89ac8565.js"
+    "revision": "06026808f3f5bd611263",
+    "url": "/mralbertnguyen.github.io/static/js/main.177381fd.chunk.js"
+  },
+  {
+    "revision": "8d83ac97025773c6269d",
+    "url": "/mralbertnguyen.github.io/static/js/runtime-main.cee7c9b5.js"
   },
   {
     "revision": "6292520e4254da645a19b38fe2c7c4fc",
