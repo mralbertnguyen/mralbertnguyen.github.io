@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/mralbertnguyen.github.io/static/css/main.00daa6e7.chunk.css",
-    "main.js": "/mralbertnguyen.github.io/static/js/main.177381fd.chunk.js",
-    "main.js.map": "/mralbertnguyen.github.io/static/js/main.177381fd.chunk.js.map",
+    "main.js": "/mralbertnguyen.github.io/static/js/main.db472e75.chunk.js",
+    "main.js.map": "/mralbertnguyen.github.io/static/js/main.db472e75.chunk.js.map",
     "runtime-main.js": "/mralbertnguyen.github.io/static/js/runtime-main.cee7c9b5.js",
     "runtime-main.js.map": "/mralbertnguyen.github.io/static/js/runtime-main.cee7c9b5.js.map",
-    "static/css/2.53de959a.chunk.css": "/mralbertnguyen.github.io/static/css/2.53de959a.chunk.css",
-    "static/js/2.af69ea37.chunk.js": "/mralbertnguyen.github.io/static/js/2.af69ea37.chunk.js",
-    "static/js/2.af69ea37.chunk.js.map": "/mralbertnguyen.github.io/static/js/2.af69ea37.chunk.js.map",
+    "static/css/2.11d3bd0d.chunk.css": "/mralbertnguyen.github.io/static/css/2.11d3bd0d.chunk.css",
+    "static/js/2.36d92dcb.chunk.js": "/mralbertnguyen.github.io/static/js/2.36d92dcb.chunk.js",
+    "static/js/2.36d92dcb.chunk.js.map": "/mralbertnguyen.github.io/static/js/2.36d92dcb.chunk.js.map",
     "index.html": "/mralbertnguyen.github.io/index.html",
-    "precache-manifest.7d5727db550230972dd345b6bc0cec46.js": "/mralbertnguyen.github.io/precache-manifest.7d5727db550230972dd345b6bc0cec46.js",
+    "precache-manifest.53b5d70651db25643e9ec43265761546.js": "/mralbertnguyen.github.io/precache-manifest.53b5d70651db25643e9ec43265761546.js",
     "service-worker.js": "/mralbertnguyen.github.io/service-worker.js",
-    "static/css/2.53de959a.chunk.css.map": "/mralbertnguyen.github.io/static/css/2.53de959a.chunk.css.map",
+    "static/css/2.11d3bd0d.chunk.css.map": "/mralbertnguyen.github.io/static/css/2.11d3bd0d.chunk.css.map",
     "static/css/main.00daa6e7.chunk.css.map": "/mralbertnguyen.github.io/static/css/main.00daa6e7.chunk.css.map",
-    "static/js/2.af69ea37.chunk.js.LICENSE": "/mralbertnguyen.github.io/static/js/2.af69ea37.chunk.js.LICENSE",
+    "static/js/2.36d92dcb.chunk.js.LICENSE": "/mralbertnguyen.github.io/static/js/2.36d92dcb.chunk.js.LICENSE",
     "static/media/avt.jpg": "/mralbertnguyen.github.io/static/media/avt.6292520e.jpg",
     "static/media/style.css": "/mralbertnguyen.github.io/static/media/br-img.53ecac61.jpg",
     "static/media/cloud.png": "/mralbertnguyen.github.io/static/media/cloud.61c4e000.png",
@@ -26,9 +26,9 @@
   },
   "entrypoints": [
     "static/js/runtime-main.cee7c9b5.js",
-    "static/css/2.53de959a.chunk.css",
-    "static/js/2.af69ea37.chunk.js",
+    "static/css/2.11d3bd0d.chunk.css",
+    "static/js/2.36d92dcb.chunk.js",
     "static/css/main.00daa6e7.chunk.css",
-    "static/js/main.177381fd.chunk.js"
+    "static/js/main.db472e75.chunk.js"
   ]
 }
