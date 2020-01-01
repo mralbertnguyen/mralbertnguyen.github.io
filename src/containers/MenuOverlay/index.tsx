@@ -3,24 +3,13 @@ import "./style.css";
 import menu_data from "../../data/menu.json";
 import { MenuDataType } from "../../utils/types/menu.type";
 import { Link } from "react-router-dom";
-import styled from 'styled-components';
+import FeatureComingSoon from '../../components/FeatureComming';
 
 interface Props {
   display: boolean;
 }
 
-const SCNoti = styled.p`
-  text-align: center;
-  font-size : 30px;
-  color: white;
-  font-weight: bold;
 
-`
-
-const FeatureComingSoon = () => {
-  let txt = "Feature disabled";
-  return <SCNoti>{txt.toUpperCase()}</SCNoti>
-}
 function MenuItemList(item: MenuDataType) {
   return (
     <div key={item.id} className="container-menu-item-list">
