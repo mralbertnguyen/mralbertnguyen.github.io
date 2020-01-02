@@ -6,8 +6,8 @@ import MenuHeader from "../../Menu/BlogMenu/";
 import SocialView from "../../SocialView";
 
 const SCImg = styled.img`
-  height: 80px;
-  width: auto;
+  height: auto;
+  width: 100%;
 `;
 
 const SCRow = styled(Row)`
@@ -26,19 +26,17 @@ export default class BlogHeader extends Component {
   render() {
     return (
       <SCRow>
+        {/* Menu */}
+        <Col md={4} xs={4}>
+          <MenuHeader />
+        </Col>
         {/* Logo */}
-        <Col md={6}>
+        <Col md={6} xs={6}>
           <SCImg alt="signature" src={signature} />
         </Col>
-
         {/* Social View */}
-        <Col md={14}>
-          <SocialView/>
-        </Col>
-
-        {/* Menu */}
-        <Col md={4}>
-          <MenuHeader/>
+        <Col md={14} xs={14}>
+          <SocialView />
         </Col>
       </SCRow>
     );
