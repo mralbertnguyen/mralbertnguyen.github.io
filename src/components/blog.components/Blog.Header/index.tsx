@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import { Row, Col } from "antd";
 import signature from "../../../assets/imgs/signature.png";
-import MenuHeader from "../../Menu/BlogMenu/";
+import BlogMenu from "../Blog.Menu";
 import SocialView from "../../SocialView";
 
 const SCImg = styled.img`
@@ -28,7 +28,7 @@ export default class BlogHeader extends Component {
       <SCRow>
         {/* Menu */}
         <Col md={4} xs={4}>
-          <MenuHeader />
+          <BlogMenu/>
         </Col>
         {/* Logo */}
         <Col md={6} xs={6}>

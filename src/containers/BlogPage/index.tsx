@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import BlogHeader from "../../components/Header/Blog.Header";
+import BlogHeader from "../../components/blog.components/Blog.Header";
 import BlogContent from "../Contents/Blog";
 const StyledContainerBlog = styled.div`
   flex-wrap: nowrap;
