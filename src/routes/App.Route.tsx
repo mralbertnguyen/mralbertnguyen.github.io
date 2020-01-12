@@ -28,7 +28,7 @@ const DataRoute = [
 
 const AppRoute = () => { 
     return (
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
             <Switch>
                 {
                     DataRoute.map(i => {

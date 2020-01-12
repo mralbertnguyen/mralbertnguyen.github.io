@@ -1,5 +1,5 @@
 const DOMAIN = "";
-export const PATH_ROOT = DOMAIN + "/";
+export const PATH_ROOT = "/";
 export const PATH_BLOG_PAGE = "/blog-page";
 export const PATH_SHOP_PAGE = "/shop-page";
 

@@ -32,7 +32,6 @@ function ListMenu() {
 
 function FeatureFlag() {
   let isEnabled = process.env.REACT_APP_ENABLE_BLOG;
-  console.log(`REACT_APP_ENABLE_BLOG ${isEnabled}`)
   return (!isEnabled) ? <ListMenu /> : <FeatureComingSoon />;
 }
 
