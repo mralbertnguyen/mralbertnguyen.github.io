@@ -11,14 +11,13 @@ const SCImg = styled.img`
 `;
 
 const SCRow = styled(Row)`
-    display: flex !important;
-    position: fixed !important;
-    flex-direction: row !important;
-    justify-content: center !important;
-    align-items: center !important;
-    padding : 0px 2% !important;
-    height : 100px !important;
-    width : 100% !important;
+    display: flex;
+    position: fixed;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding : 0px 2%;
+    width : 100%;
     z-index : 11;
 `
 

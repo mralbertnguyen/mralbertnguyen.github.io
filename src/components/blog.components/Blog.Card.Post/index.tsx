@@ -4,7 +4,6 @@ import { DEFAUTL_BR_PATH } from '../../../utils/constants';
 import { ItemNewestPostType } from '../../../utils/types/blog.post.types'
 
 const ContainerItemNewest = styled.div`
-  background-color:pink;
   height : 30%;
   width : 100%;
   display: flex;
@@ -14,7 +13,6 @@ const ContainerItemNewest = styled.div`
 `
 
 const ViewInfo = styled.div`
-  background-color: black;
   opacity: 0.5;
   height : 100%;
   width : 100%;
@@ -33,7 +31,7 @@ const ItemCardPost: React.SFC<ItemNewestPostProps> = (props) => {
   return (
     <ContainerItemNewest>
         <ImgPost alt={`${props.data.id}_${props.data.title}`} src={!props.data.brPath ? DEFAUTL_BR_PATH : props.data.brPath}/>
-      <ViewInfo>
+      <ViewInfo className="card-post-view-info">
         <p className="newest-category post-newest">{props.data.type.toUpperCase()}</p>
         <p className="newest-title post-newest">{props.data.title}</p>
       </ViewInfo>

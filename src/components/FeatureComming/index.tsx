@@ -10,7 +10,7 @@ const SCNoti = styled.p`
 
 `
 const FeatureComingSoon = () => {
-    let txt = "Feature disabled";
+    let txt = "Feature is comming";
     return <SCNoti>{txt.toUpperCase()}</SCNoti>
 }
 

@@ -4,7 +4,6 @@ import { DEFAUTL_BR_PATH } from '../../../utils/constants';
 import { ItemNewestPostType } from '../../../utils/types/blog.post.types'
 
 const ContainerItemNewest = styled.div`
-  background-color:pink;
   height : 100%;
   width : 100%;
   display: flex;
@@ -15,18 +14,17 @@ const ContainerItemNewest = styled.div`
 `
 
 const ViewLabelOverlayNewest = styled.div`
-  background-color: black;
   opacity: 0.5;
   height : 50%;
   width : 100%;
   display: flex;
   flex-direction: column;
+  background-color : black;
 `
 const ViewAuthorAndDate = styled.div`
     display: flex;
     flex-direction: row;
     width : 70%;
-    background-color: red;
 `
 
 interface ItemNewestPostProps {

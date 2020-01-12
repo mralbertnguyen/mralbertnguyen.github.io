@@ -11,12 +11,10 @@ const SCContainer = styled.div`
   top: 100px;
   width: 70%;
   position: absolute;
-  background-color: red;
 `
 const SCContainerHeadPosts = styled.div`
   height : 400px;
   width : 100%;
-  background-color : blue;
   display: flex; 
   flex-direction: row;
 `
@@ -24,7 +22,6 @@ const SCContainerHeadPosts = styled.div`
 const HeadLeftCol = styled.div`
   width : 50%;
   height: 100%;
-  background-color: green;
   display: flex;
   justify-content:center;
   align-item:center;
@@ -35,7 +32,6 @@ const HeadRightCol = styled.div`
   height: 100%;
   display:flex;
   flex-direction: column;
-  background-color: yellow;
   justify-content: space-between;
   padding: 0px 0px 0px 10px;
 `

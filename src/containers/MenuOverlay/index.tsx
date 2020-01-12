@@ -32,7 +32,8 @@ function ListMenu() {
 
 function FeatureFlag() {
   let isEnabled = process.env.REACT_APP_ENABLE_BLOG;
-  return (isEnabled) ? <ListMenu /> : <FeatureComingSoon />;
+  console.log(`REACT_APP_ENABLE_BLOG ${isEnabled}`)
+  return (!isEnabled) ? <ListMenu /> : <FeatureComingSoon />;
 }
 
 function MenuOverlay(props: Props) {

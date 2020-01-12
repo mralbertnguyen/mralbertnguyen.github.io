@@ -12,7 +12,7 @@ interface States {
     toggle: boolean,
     colorBugger: string,
     lblButtonViewMore: string,
-    headerTitle:string
+    headerTitle: string
 }
 
 interface Props {
@@ -23,7 +23,7 @@ const SCRow = styled(Row)`
     position : absolute !important;
     bottom : 0px;
     height: 100% !important;
-    width: 100% !important;
+    width: 100% ;
     padding-top: 10%;
 `
 
@@ -60,9 +60,9 @@ export default class AppLayout extends React.Component<Props, States> {
         }
     }
 
-    componentDidMount(){
+    componentDidMount() {
         this.setState({
-            headerTitle : process.env.REACT_APP_TITLE || "Header TItle" 
+            headerTitle: process.env.REACT_APP_TITLE || "Header TItle"
         });
     }
 
@@ -77,13 +77,13 @@ export default class AppLayout extends React.Component<Props, States> {
     }
 
     render() {
-        const {headerTitle} = this.state;
+        const { headerTitle } = this.state;
         return (
             <div className="container-layout">
                 <Helmet>
-                <meta charSet="utf-8" />
-                <title>{headerTitle}</title>
-            </Helmet>
+                    <meta charSet="utf-8" />
+                    <title>{headerTitle}</title>
+                </Helmet>
                 <div className="container-blur-effect" />
                 <Header colorBugger={this.state.colorBugger} toggle={this.state.toggle} onClickMenuButton={this.handleClickMenuButton} />
                 <MenuOverlay display={this.state.displayMenu} />
