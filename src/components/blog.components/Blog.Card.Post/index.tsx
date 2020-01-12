@@ -24,7 +24,7 @@ const ViewInfo = styled.div`
 
 const ImgPost = styled.img`
     height :100%;
-    width : auto;
+    width : 200px;
 `
 interface ItemNewestPostProps {
   data: ItemNewestPostType;
