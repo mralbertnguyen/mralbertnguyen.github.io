@@ -1,14 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 import './style.css';
-import HamburgerButton from '../../HamburgerButton/';
+import HamburgerButton from '../../HamburgerButton';
 import { PATH_ROOT } from '../../../utils/paths';
+
 const SCMenuBlog = styled.div`
     height : 100px;
     width :100%;
     display : flex;
     align-items: center;
-    flex-direction: row-reverse;
+    flex-direction: row;
 `
 
 export default class BlogMenu extends React.Component{
