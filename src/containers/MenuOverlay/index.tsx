@@ -30,17 +30,23 @@ function ListMenu() {
   );
 };
 
-function FeatureFlag() {
-  let isEnabled = process.env.REACT_APP_ENABLE_BLOG;
-  return (!isEnabled) ? <ListMenu /> : <FeatureComingSoon />;
+function CheckMenuEnabled(enable: any) {
+  return (
+    <div className="container-menu-overlay">
+      {
+        (enable) ? <ListMenu /> : <FeatureComingSoon />
+      }
+    </div>
+  )
 }
 
 function MenuOverlay(props: Props) {
-  console.log(process.env.REACT_APP_ENABLE_BLOG);
+  const isEnabled = process.env.REACT_APP_ENABLE_BLOG;
+  console.log("Enable menu: " + isEnabled);
   return (
-    props.display ? <div className="container-menu-overlay">
-      <FeatureFlag />
-    </div> : null
+    props.display ?
+      <CheckMenuEnabled enable={isEnabled} />
+      : null
   );
 }
 
