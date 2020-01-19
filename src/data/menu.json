@@ -13,5 +13,10 @@
     "id": "blog",
     "title": "Blog",
     "path": "/blog-page"
+  },
+  {
+    "id": "date",
+    "title": "Date",
+    "path": "/date-page"
   }
 ]
