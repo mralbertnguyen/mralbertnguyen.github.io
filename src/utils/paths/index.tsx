@@ -1,15 +1,7 @@
-<<<<<<< HEAD
-const DOMAIN = "";
-export const PATH_ROOT = DOMAIN + "/";
+export const PATH_ROOT ="/";
 export const PATH_BLOG_PAGE = "/blog-page";
 export const PATH_SHOP_PAGE = "/shop-page";
 export const PATH_DATE_PAGE ="/date-page";
-=======
-export const PATH_ROOT = "/";
-export const PATH_BLOG_PAGE = "/blog-page";
-export const PATH_SHOP_PAGE = "/shop-page";
-
->>>>>>> 96528fb82780393ca0e0be14c9f4fa93f4c55130
 
 
 // Socials
