@@ -40,7 +40,6 @@ const ItemNewestPost: React.SFC<ItemNewestPostProps> = (props) => {
           <p className="newest-author post-newest">{props.data.author}</p>
           <p className="newest-post-date post-newest">{props.data.date}</p>
         </ViewAuthorAndDate>
-
       </ViewLabelOverlayNewest>
     </ContainerItemNewest>
   );
