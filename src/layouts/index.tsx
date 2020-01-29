@@ -6,6 +6,7 @@ import Header from '../components/Header';
 import ShortResume from '../components/ShortResume';
 import MenuOverlay from '../containers/MenuOverlay';
 import "./style.css";
+import { Link } from 'react-router-dom';
 
 interface States {
     displayMenu: boolean,
@@ -27,24 +28,20 @@ const SCRow = styled(Row)`
     padding-top: 10%;
 `
 
-const SCContainerButton = styled.div`
-    height : 100px;
-    width : 100%;
-    display : flex;
-    justify-content : center;
-    align-items : center;
-`
-
-const SCButtonViewMore = styled.button`
+const SCButtonViewMore = styled(Link)`
     background-color : black;
-    height: 40%;
+    height: 50px;
     width: 100px;
     font-size: 12px;
     display : flex;
     justify-content: center;
+    align-items:center;
     border: none;
     outline: transparent;
     color: white;
+    align-self:center;
+    transform: translate(-50%,50%);
+    margin-left: 50%;
 `
 
 export default class AppLayout extends React.Component<Props, States> {
@@ -89,11 +86,9 @@ export default class AppLayout extends React.Component<Props, States> {
                 <MenuOverlay display={this.state.displayMenu} />
                 <SCRow>
                     <ShortResume />
-                    <SCContainerButton>
-                        <SCButtonViewMore>
-                            <p>{this.state.lblButtonViewMore.toLowerCase()}</p>
-                        </SCButtonViewMore>
-                    </SCContainerButton>
+                    <SCButtonViewMore to="/shop-page">
+                        <p>{this.state.lblButtonViewMore.toLowerCase()}</p>
+                    </SCButtonViewMore>
                 </SCRow>
             </div>
         )
