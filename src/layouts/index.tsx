@@ -1,19 +1,18 @@
 import { Row } from 'antd';
 import React from 'react';
-import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
+import CustomHelmet from "../components/CustomHelmet"
 import Header from '../components/Header';
 import ShortResume from '../components/ShortResume';
 import MenuOverlay from '../containers/MenuOverlay';
 import "./style.css";
-import { Link } from 'react-router-dom';
 
 interface States {
     displayMenu: boolean,
     toggle: boolean,
     colorBugger: string,
     lblButtonViewMore: string,
-    headerTitle: string
+    linkFile : string
 }
 
 interface Props {
@@ -28,7 +27,7 @@ const SCRow = styled(Row)`
     padding-top: 10%;
 `
 
-const SCButtonViewMore = styled(Link)`
+const SCButtonViewMore = styled.div`
     background-color : black;
     height: 50px;
     width: 100px;
@@ -43,7 +42,9 @@ const SCButtonViewMore = styled(Link)`
     transform: translate(-50%,50%);
     margin-left: 50%;
 `
-
+const LblViewMore = styled.a`
+    color : white
+`
 export default class AppLayout extends React.Component<Props, States> {
 
     constructor(props: Props) {
@@ -53,14 +54,8 @@ export default class AppLayout extends React.Component<Props, States> {
             toggle: false,
             colorBugger: 'black',
             lblButtonViewMore: 'view more',
-            headerTitle: ''
+            linkFile : 'https://drive.google.com/open?id=1G1qm3_F9j5nqs_lplV8X19H4IVXHJhBT'
         }
-    }
-
-    componentDidMount() {
-        this.setState({
-            headerTitle: process.env.REACT_APP_TITLE || "Header TItle"
-        });
     }
 
     handleClickMenuButton = () => {
@@ -74,20 +69,17 @@ export default class AppLayout extends React.Component<Props, States> {
     }
 
     render() {
-        const { headerTitle } = this.state;
+        const { linkFile} = this.state;
         return (
             <div className="container-layout">
-                <Helmet>
-                    <meta charSet="utf-8" />
-                    <title>{headerTitle}</title>
-                </Helmet>
+                <CustomHelmet/>
                 <div className="container-blur-effect" />
                 <Header colorBugger={this.state.colorBugger} toggle={this.state.toggle} onClickMenuButton={this.handleClickMenuButton} />
                 <MenuOverlay display={this.state.displayMenu} />
                 <SCRow>
                     <ShortResume />
-                    <SCButtonViewMore to="/shop-page">
-                        <p>{this.state.lblButtonViewMore.toLowerCase()}</p>
+                    <SCButtonViewMore>
+                        <LblViewMore href={linkFile} target="_bank">{this.state.lblButtonViewMore.toLowerCase()}</LblViewMore>
                     </SCButtonViewMore>
                 </SCRow>
             </div>
