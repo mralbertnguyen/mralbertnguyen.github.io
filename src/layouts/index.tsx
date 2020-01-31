@@ -56,7 +56,7 @@ export default class AppLayout extends React.Component<Props, States> {
             lblButtonViewMore: 'view more',
             linkFile : 'https://drive.google.com/open?id=1G1qm3_F9j5nqs_lplV8X19H4IVXHJhBT'
         }
-    }
+    }   
 
     handleClickMenuButton = () => {
         this.setState({
@@ -85,4 +85,4 @@ export default class AppLayout extends React.Component<Props, States> {
             </div>
         )
     }
-}
+}   
