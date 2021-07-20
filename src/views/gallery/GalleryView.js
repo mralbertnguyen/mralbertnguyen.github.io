@@ -10,7 +10,6 @@ const GalleryScreen = () => {
             <button onClick={onClick("css_100")}>
                 CSS 100 days challenge
             </button>
-
         </div>
     );
 }

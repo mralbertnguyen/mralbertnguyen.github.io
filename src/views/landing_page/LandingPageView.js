@@ -1,26 +1,31 @@
 import React from "react";
+import "./LandingPageView.scss";
 
 const LandingPageView = () => {
     return (
         <div id="landing-page-container">
             <section className="left-session">
                 left session
+
+                {/* TODO: Drawer Menu ....  */}
             </section>
 
             <section className="right-session">
-                right
-                <section className="menu-session">
+                <div id="menu-session">
                     menu
-                </section>
-
-                <section className="user-overview-session">
-                    user
-                </section>
-
-                <div className="float-button-container">
-                    float
                 </div>
+
+                <div className="user-overview-session">
+                    user
+                </div>
+
+
             </section>
+
+
+            <div className="float-button-container">
+                float
+            </div>
         </div>
     );
 }

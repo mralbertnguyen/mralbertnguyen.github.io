@@ -1,0 +1,46 @@
+#landing-page-container {
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    display: flex;
+    position: absolute;
+
+    .left-session {
+        position: relative;
+        display: flex;
+        left: 0;
+        top: 0px;
+        bottom: 100px;
+        background-color: blue;
+        width: 30%;
+    }
+
+    .right-session {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: bisque;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+#landing-page-container > .right-session > #menu-session {
+    height: 100px;
+    width: 50%;
+    background-color: cadetblue;
+    right: 100px;
+    top: 50px;
+    position: absolute;
+}
+
+#landing-page-container > .float-button-container {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    height: 100px;
+    width: 100px;
+    background-color: yellowgreen;
+    border-radius: 50%;
+}
