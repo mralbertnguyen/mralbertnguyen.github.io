@@ -1,4 +1,6 @@
 import React from "react";
+import ProjectGallery from "../../components/project_gallery/ProjectGallery";
+import UserCard from "../../components/user_card/UserCard";
 import "./LandingPageView.scss";
 
 const LandingPageView = () => {
@@ -6,10 +8,12 @@ const LandingPageView = () => {
         <div id="landing-page-container">
             <section className="left-session">
                 left session
+                <UserCard />
 
-                {/* TODO: Drawer Menu ....  */}
+                <ProjectGallery />
             </section>
 
+            {/* TODO: Drawer Menu ....  */}
             <section className="right-session">
                 <div id="menu-session">
                     menu
@@ -19,9 +23,7 @@ const LandingPageView = () => {
                     user
                 </div>
 
-
             </section>
-
 
             <div className="float-button-container">
                 float

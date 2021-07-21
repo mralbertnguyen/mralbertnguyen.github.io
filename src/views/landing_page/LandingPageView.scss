@@ -7,12 +7,12 @@
 
     .left-session {
         position: relative;
-        display: flex;
+        display: block;
         left: 0;
         top: 0px;
         bottom: 100px;
         background-color: blue;
-        width: 30%;
+        width: 40%;
     }
 
     .right-session {
